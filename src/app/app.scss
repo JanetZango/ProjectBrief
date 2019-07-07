@@ -1,0 +1,72 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+.myAlert {
+  
+    color: #ffffff;
+    button {
+        color: rgb(255, 255, 255);
+      margin: 0 auto;
+      text-transform: uppercase;
+    }
+    .alert-message {
+      color: rgb(255, 255, 255); // text color for confirm alerts
+    }
+    .alert-wrapper, .alert-head {
+      background-color: #004d6f;
+      border-radius: 10px;
+      color: #ffffff;
+      animation: 0.7s bounceIn;
+    }
+    .alert-subTitle{
+      color: rgb(255, 255, 255);
+    }
+  
+    
+  }
+  .alert-md .alert-input {
+        margin: 5px 0;
+        border-bottom: 1px solid #ffffff;
+        color: rgb(255, 255, 255) !important;
+    }
+ .alert-md .alert-button .button-inner {
+  
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ffffff !important;
+        background-color: transparent;
+    
+    }
+    .loading-md .loading-wrapper {
+        max-height: 13%;
+        border-radius: 15px;
+        background-color: #ffffff;
+        color: #000000 !important;
+      }
+      .loading-md .spinner-crescent circle {
+        stroke: #808080;
+    }
+    .toast-md .toast-message {
+        font-size: 1.5rem;
+        color: #000000;
+        padding: 19px 16px 17px;
+        background-color: #Ffffff
+    }

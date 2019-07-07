@@ -1,0 +1,22 @@
+<ion-content>
+    <div class="divimage">
+        <img src="../../assets/imgs/logo 1.png">
+    </div>
+    <p class="changefont">Sign Up</p>
+    <ion-list>
+        <div class="inputs">
+            <ion-item no-lines>
+                <ion-input class="inputfields" type="text" placeholder="Username" value="" [(ngModel)]="username"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-input class="inputfields" type="text" placeholder="Email" value="" [(ngModel)]="email"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-input class="inputfields" type="password" placeholder="Password" value="" [(ngModel)]="password"></ion-input>
+            </ion-item>
+        </div>
+    </ion-list>
+    <div class="btndiv">
+        <button ion-button (click)="SignUp()">Register</button>
+    </div>
+</ion-content>

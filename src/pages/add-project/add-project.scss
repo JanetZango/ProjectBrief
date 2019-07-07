@@ -1,0 +1,29 @@
+page-add-project {
+.changefont{
+    text-align: center;
+    font-size: 2em;
+    color:#004d6f;
+}
+.btndiv{
+    text-align: center;
+ 
+    button{
+        border-radius: 100px;
+        width:200px;
+    }
+}
+.inputs{
+    width:90%;
+    margin: 0 auto;
+    margin-top:100px
+   }
+   .inputfields{
+    margin-top:10px;
+    background:rgb(0,77,111);
+    border-radius: 100px;
+    color:white;
+}
+ion-item{
+    border-bottom: 0px solid transparent !important;
+}
+}

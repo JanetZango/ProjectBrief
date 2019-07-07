@@ -1,0 +1,7 @@
+{
+  "name": "projectbrief",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,50 @@
+page-list {
+    .top{
+        height:20%;
+        background:#004d6f;
+    }
+    .bottom{
+        height:80%;
+    }
+    .listdiv{
+        margin-top:100px;
+    }
+  
+    }
+    .carddiv {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.564);
+        border-radius: 20px;
+    }
+    .creatediv{
+        display:flex;
+        width:90%;
+        margin: 0px auto;
+        padding-left:10px;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.352)
+        // border:2px solid red;
+    }
+    .fab-md-light{
+        background-color: #004d6f;
+        color:white;
+    }
+    .image{
+        height:100%;
+        width:30%;
+    }
+    .information{
+        height:100%;
+        width:70%;
+    }
+    .paddingdiv{
+
+        text-align: left;
+        padding-left: 5px;
+    }
+    .changefontname{
+        font-family: 'Old Standard TT', serif;
+        color:#004d6f;
+        font-weight: bolder;
+        text-transform: capitalize;
+    }

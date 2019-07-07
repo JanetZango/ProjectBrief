@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="top">
+    <div class="divimage">
+      <img src="../../assets/imgs/logo 1.png">
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="listdiv" >
+      <div class="creatediv" *ngFor="let a of ProjectArr" (click)="goToViewPage(a.Requestingfunds)">
+        <div class="image"  >
+          <img src="../../assets/imgs/8d02ff048b.png">
+        </div>
+        <div class="information">
+          <div class="paddingdiv">
+            <p class="changefontname">{{a.name}}</p>
+              <p>
+                  <b>RequestingFunds:</b> R{{a.Requestingfunds}}</p>
+                <p>
+                  <b>DeadlineDate:</b> {{a.deadline}}</p>
+                <p>
+                  <b>CompletionDate:</b> {{a.Completion}}</p>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-fab right bottom >
+    <button  mini (click)="goToAddproject()" ion-fab color="light">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-fab right top>
+    <button (click)="logOut()" ion-fab color="light">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab> 
+</ion-content>

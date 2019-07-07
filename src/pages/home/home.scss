@@ -1,0 +1,97 @@
+page-home {
+    .divimage{
+        text-align: center;
+        padding-top:10px;
+    }
+    img{
+        height:200px;
+       
+    }
+    .changefont{
+     font-size:3em;
+     text-align: center;
+     color: #004d6f
+
+     
+     }
+     .inputs{
+      width:90%;
+      margin: 0 auto;
+      margin-top:-30px
+     }
+ 
+    .btndiv{
+    width:100%;
+    text-align: center;
+    color:rgb(0,77,111)
+
+ 
+   }
+   .btndiv2{
+       text-align: center;
+       button{
+        width:60%;
+        border-radius: 100px;
+       }
+   }
+   ion-item{
+       border-bottom: 0px solid transparent !important;
+   }
+   b{
+       color:#0096ce;
+   }
+.inputfields{
+    margin-top:10px;
+background:rgb(0,77,111);
+border-bottom: 0px solid transparent !important;
+border-radius: 100px;
+color:white;
+}
+.item-input-has-focus .input-cover .input-has-focus .input-cover{
+    border-bottom: 0px solid transparent !important;
+}
+.label, .label-md{
+    padding-left: 10px;
+    font-size:0.9em;
+}
+button{
+  width:170px;
+  border-radius: 100px;
+  text-transform: capitalize !important;
+}
+p{
+    text-align: center;
+}
+.changebtn{
+font-size:1em;
+width:100%;
+
+}
+.top{
+    background-color: rgb(31, 125, 162);
+    width:100%;
+    height:30%;
+}
+.bottom{
+    // background-color: pink;
+    width:100%;
+    height:70%;
+    position: relative;
+}
+.thecard{
+    width:90%;
+    height:100%;
+    min-height: 400px; 
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.304);
+    position: absolute;
+    top:-15vh;
+    left:50%;
+    transform: translateX(-50%)
+}
+ion-content{
+    overflow:hidden;
+}
+
+}

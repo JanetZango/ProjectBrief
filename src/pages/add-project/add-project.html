@@ -1,0 +1,25 @@
+<ion-content>
+  <p class="changefont">Upload ProjectBrief</p>
+  <input id="file" type="file" accept="pdf/*" (change)="UploadProfilePic($event)">
+  <ion-list>
+    <div class="inputs">
+      <ion-item id="item" no-lines>
+        <ion-input class="inputfields" placeholder="ProjectName" type="text" value="" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item id="item" no-lines>
+        <ion-input class="inputfields" placeholder="Funds" type="number" value="" [(ngModel)]="funds"></ion-input>
+      </ion-item>
+      <ion-item id="item" no-lines>
+        <ion-input class="inputfields" placeholder="Deadline" type="date" value="" [(ngModel)]="deadline"></ion-input>
+      </ion-item>
+      <ion-item id="item" no-lines>
+        <ion-input class="inputfields" placeholder="Completion" type="date" value="" [(ngModel)]="Completion"></ion-input>
+      </ion-item>
+    </div>
+
+  </ion-list>
+  <div class="btndiv">
+    <button ion-button (click)="addProject()">Add Project</button>
+  </div>
+
+</ion-content>

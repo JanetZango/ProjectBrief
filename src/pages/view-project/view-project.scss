@@ -1,0 +1,27 @@
+page-view-project {
+.changefont{
+    color: #004d6f;
+    font-size:2em;
+    text-align: center;
+}
+.image{
+    height:30%;
+    width:100%;
+
+    text-align: center;
+    img{
+        height:200px;
+        width:200px;
+    }
+}
+.btndiv{
+    //  border:2px solid red;  
+     margin-top:150px;
+     text-align: center;
+     button{
+         border-radius: 100px;
+         width:200px;
+      
+     } 
+}
+}
