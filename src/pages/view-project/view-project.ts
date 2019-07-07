@@ -34,6 +34,7 @@ export class ViewProjectPage {
   expYear;
   cvc;
   Amount;
+  user;
   constructor(public navCtrl: NavController, public navParams: NavParams, private stripe: Stripe, private http: HttpClient, public alertCtrl: AlertController, public project: ProjectProvider) {
     console.log(this.loginState)
 
@@ -41,9 +42,10 @@ export class ViewProjectPage {
     this.deadline = this.loginState[0].deadline
     this.completion = this.loginState[0].Completion
     this.projectbrief = this.loginState[0].ProjectFile
+    this.user = this.loginState[0].user
     this.key = this.loginState[0].k
 
-    console.log(this.key)
+    console.log(this.loginState)
   }
 
   ionViewDidLoad() {
@@ -128,7 +130,7 @@ export class ViewProjectPage {
                 console.log(token)
                 console.log(this.getProjectDetails)
                 console.log('Payment successful')
-                this.project.updateStudent(data.Amount,token,this.key).then((data) => {
+                this.project.updateStudent(data.Amount,token,this.key,this.user).then((data) => {
                   console.log('updated')
                   console.log(this.key)
                   this.getProjectDetails.length=0;

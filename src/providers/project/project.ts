@@ -160,6 +160,7 @@ export class ProjectProvider {
                 token: values[key].token,
                 Amount: values[key].Amount,
                 name: values[key].name,
+                user:user.uid,
                 k:key              
               }
               console.log(obj)
@@ -175,11 +176,11 @@ export class ProjectProvider {
     })
   })
 }
-  updateStudent(Amount,token,key) {
+  updateStudent(Amount,token,key,id) {
     console.log(key)
     return new Promise((accpt, rej) => {
       console.log(key)
-    firebase.database().ref("ProjectBrief/" + key).update({
+    firebase.database().ref("ProjectBrief/" + id + key).update({
       Amount: Amount,
       token:token
     })
