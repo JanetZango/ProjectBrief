@@ -13,7 +13,7 @@ import { AddProjectPage } from '../pages/add-project/add-project';
 import { ViewProjectPage } from '../pages/view-project/view-project';
 import { Stripe } from '@ionic-native/stripe';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { DocumentViewer } from '@ionic-native/document-viewer';
+import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
 
 
 

@@ -3,19 +3,23 @@
   <div class="image">
       <img src="../../assets/imgs/8d02ff048b.png">
     </div>
+    <button ion-button (click)="viewpdf()">View PDF</button>
     <div class="details">
       <b>ReQuestingFunds:</b><p>{{funds}}</p>
      <b> Deadline</b><p>{{deadline}}</p>
       <b>CompletionDate</b><p>{{completion}}</p>
     </div>
- 
-  <!-- <p>{{projectbrief}}</p> -->
   <div class="btndiv">
       <button ion-button (click)="showPrompt()">Make Payment</button>
   </div>
+  <ion-fab left top>
+    <button mini (click)="removeImage()" ion-fab color="light">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-fab> 
   <ion-fab right top>
     <button mini (click)="removeImage()" ion-fab color="light">
-      <ion-icon name="mark"></ion-icon>
+      <ion-icon name="checkmark"></ion-icon>
     </button>
   </ion-fab> 
   </ion-content>

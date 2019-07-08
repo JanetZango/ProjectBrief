@@ -4,7 +4,7 @@ import { Stripe } from '@ionic-native/stripe';
 import { HttpClient } from "@angular/common/http";
 import { AlertController } from 'ionic-angular';
 import { ProjectProvider } from '../../providers/project/project';
-import { DocumentViewer } from '@ionic-native/document-viewer';
+import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
 import { ListPage } from '../list/list';
 
 /**
@@ -56,13 +56,13 @@ export class ViewProjectPage {
     console.log('ionViewDidLoad ViewProjectPage');
   }
 
-  // viewpdf(){
-  //   const options: DocumentViewerOptions = {
-  //     title: 'My PDF'
-  //   }
+  viewpdf(){
+    const options: DocumentViewerOptions = {
+      title: 'My PDF'
+    }
     
-  //   this.document.viewDocument('assets/myFile.pdf', 'application/pdf', options)
-  // }
+    this.document.viewDocument(this.projectbrief, 'application/pdf',options)
+  }
 
 
   payment() {
@@ -169,7 +169,7 @@ export class ViewProjectPage {
   
   removeImage() {
     this.project.removeproject(this.key,this.user);
-      // this.navCtrl.push(ListPage)
+      this.navCtrl.push(ListPage)
 
 }
 
