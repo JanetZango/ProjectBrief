@@ -23,7 +23,7 @@ export class ListPage {
 
   //varibles
   logInState
-  constructor(public navCtrl: NavController, public navParams: NavParams, public hubs: ProjectProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public hubs: ProjectProvider,) {
     this.hubs.RetrieveProjectBrief().then((data: any) => {
       this.ProjectArr = data
       console.log(data)
@@ -55,6 +55,7 @@ export class ListPage {
     }
   }
 
-  
 
+  
+ 
 }

@@ -4,6 +4,9 @@ import { Stripe } from '@ionic-native/stripe';
 import { HttpClient } from "@angular/common/http";
 import { AlertController } from 'ionic-angular';
 import { ProjectProvider } from '../../providers/project/project';
+import { DocumentViewer } from '@ionic-native/document-viewer';
+import { ListPage } from '../list/list';
+
 /**
  * Generated class for the ViewProjectPage page.
  *
@@ -35,7 +38,7 @@ export class ViewProjectPage {
   cvc;
   Amount;
   user;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private stripe: Stripe, private http: HttpClient, public alertCtrl: AlertController, public project: ProjectProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private stripe: Stripe, private http: HttpClient, public alertCtrl: AlertController, public project: ProjectProvider,private document: DocumentViewer) {
     console.log(this.loginState)
 
     this.funds = this.loginState[0].Requestingfunds
@@ -52,6 +55,15 @@ export class ViewProjectPage {
 
     console.log('ionViewDidLoad ViewProjectPage');
   }
+
+  // viewpdf(){
+  //   const options: DocumentViewerOptions = {
+  //     title: 'My PDF'
+  //   }
+    
+  //   this.document.viewDocument('assets/myFile.pdf', 'application/pdf', options)
+  // }
+
 
   payment() {
     this.stripe.setPublishableKey(this.stripe_key);
@@ -134,6 +146,13 @@ export class ViewProjectPage {
                   console.log('updated')
                   console.log(this.key)
                   this.getProjectDetails.length=0;
+                  const alert = this.alertCtrl.create({
+                    cssClass: "myAlert",
+                    title: 'Confirmation',
+                    subTitle: "The Payment has been made",
+                    buttons: ['OK']
+                  });
+                  alert.present();
                 })
               })
               .catch(error =>
@@ -145,5 +164,13 @@ export class ViewProjectPage {
     prompt.present();
   }
 
+
+  
+  
+  removeImage() {
+    this.project.removeproject(this.key,this.user);
+      // this.navCtrl.push(ListPage)
+
+}
 
 }

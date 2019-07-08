@@ -130,6 +130,7 @@ export class ProjectProvider {
     })
   }
   RetrieveProjectBrief() {
+      this.projctArr=[];
     var user = firebase.auth().currentUser;
     return new Promise((resolve, reject) => {
       let loading = this.loadingCtrl.create({
@@ -144,6 +145,7 @@ export class ProjectProvider {
         let keys = Object.keys(data.val());
         console.log(keys)
           for (var i = 0; i < keys.length; i++) {
+            // this.projctArr.length=0;
           firebase.database().ref("ProjectBrief/" + keys[i]).on("value", (data2: any) => {
              let values = data2.val();
              console.log(values)
@@ -165,6 +167,7 @@ export class ProjectProvider {
               }
               console.log(obj)
               this.projctArr.push(obj)
+            
               console.log(this.projctArr)
               resolve(this.projctArr)
              }           
@@ -180,7 +183,7 @@ export class ProjectProvider {
     console.log(key)
     return new Promise((accpt, rej) => {
       console.log(key)
-    firebase.database().ref("ProjectBrief/" + id + key).update({
+    firebase.database().ref("ProjectBrief/" +  id + '/' + key).update({
       Amount: Amount,
       token:token
     })
@@ -196,6 +199,13 @@ export class ProjectProvider {
 
     })
 
+  }
+  removeproject(key,id) {
+    console.log(key)
+    return new Promise((accpt, rej) => {
+        firebase.database().ref("ProjectBrief/" +  id + '/' + key).remove();
+        accpt("student deleted");
+      });
   }
 
 }
